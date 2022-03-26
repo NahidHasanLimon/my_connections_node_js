@@ -4,11 +4,11 @@ const {
 
 } = require('./connectionController')
 
-router.get('/connections', getAllConnections)
+router.get('/', getAllConnections)
 router.post('/create',createConnection )
 router.put('/update/:id',updateConnection )
 router.delete('/delete/:id',deleteConnection)
-router.get('/:id',findConnectionById)
+router.get('/find/:id',findConnectionById)
 
 
 module.exports = router

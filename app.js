@@ -13,11 +13,9 @@ async function fetchData(){
     return fs.readFile('connections.json', (err,data) =>{
     })
 }
- app.get('/',(req,res)=>{
-    // res.send('<h1 style = "text-alignment:center;"> Welcome to my Connection List</h1>');
-    fs.readFile('connections.json', (err,data) =>{
-        res.json(JSON.parse(data))
-    })   
+app.get('*',(req,res)=>{
+  
+    res.send('<h1 style = "text-alignment:center; color:red;"> 404! Not Found!</h1>');  
 })
 // console.log(router);
 app.listen(PORT, function(){
